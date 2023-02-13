@@ -1,0 +1,21 @@
+.track {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.artist {
+  font-size: 12px;
+  color: "gray";
+}
+
+.name {
+  margin: 0px;
+  color: #2089dd;
+  cursor: pointer;
+}
+.name:hover {
+  color: #44a2ed;
+  text-decoration: underline rgba(144, 202, 249, 0.4);
+}

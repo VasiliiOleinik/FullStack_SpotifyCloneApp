@@ -1,0 +1,22 @@
+.track {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.artist {
+  font-size: 12px;
+  color: 'gray';
+}
+
+.name {
+  margin: 0px;
+  color: rgb(32 137 221);
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(68 162 237);
+    text-decoration: underline rgba(144, 202, 249, 0.4);
+  }
+}
