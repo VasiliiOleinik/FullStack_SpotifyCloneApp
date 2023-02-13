@@ -22,6 +22,7 @@ var Player = function () {
             setAudio();
             play();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [active]);
     var setAudio = function () {
         if (active) {

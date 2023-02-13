@@ -24,7 +24,7 @@ const TrackPage = ({ trackID }: any) => {
 
   useEffect(() => {
     dispatch(getTrack(trackID));
-  }, []);
+  });
 
   const sendForm = () => {
     dispatch(addComment({ ...commentState, trackId: trackID }));

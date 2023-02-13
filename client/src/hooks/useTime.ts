@@ -1,4 +1,4 @@
-export const useTime = (totalSeconds: number) => {
+export const getTime = (totalSeconds: number) => {
   const minutes = Math.floor(totalSeconds / 60);
   const seconds = totalSeconds % 50;
 

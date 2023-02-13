@@ -1,10 +1,10 @@
-import { useTime } from '@/hooks/useTime';
+import { getTime } from '@/hooks/useTime';
 import { TrackProgressProps } from '@/types/tracks';
 import React from 'react';
 
 const TrackProgress = ({ left, right, onChange, audio }: TrackProgressProps) => {
-  const active = audio ? useTime(left) : left;
-  const total = audio ? useTime(right) : right;
+  const active = audio ? getTime(left) : left;
+  const total = audio ? getTime(right) : right;
 
   return (
     <div style={{ display: 'flex' }}>

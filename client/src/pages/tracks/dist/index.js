@@ -14,7 +14,7 @@ var Create = function () {
     var _a = useTypedSelectors_1.useTypedSelector(function (state) { return state.track; }), tracks = _a.tracks, error = _a.error;
     react_1.useEffect(function () {
         dispatch(getTracks_1.getTracks());
-    }, []);
+    });
     if (error) {
         return react_1["default"].createElement(MainLayout_1["default"], null,
             react_1["default"].createElement("h1", null, error));

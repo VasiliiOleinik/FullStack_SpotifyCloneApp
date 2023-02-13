@@ -14,7 +14,7 @@ const Create = () => {
 
   useEffect(() => {
     dispatch(getTracks());
-  }, [])
+  })
 
   if (error) {
     return <MainLayout><h1>{error}</h1></MainLayout>
