@@ -20,12 +20,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16.3.0'
-      - name: Cache NPM dependencies
-        uses: actions/cache@v2
-        with:
-          path: ./client/node_modules
-          key: node-${{ hashFiles("client/package.json") }}
-          restore-keys: node-
       - name: build-next-js
         working-directory:  ./client
         run: |
