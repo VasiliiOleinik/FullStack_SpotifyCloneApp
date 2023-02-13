@@ -25,4 +25,41 @@ jobs:
         run: |
           npm install
           npm run build
+          
+  build-nest-js:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.3.0'
+      - name: build-nest-js
+        working-directory:  ./server
+        run: |
+          npm install
+          npm run build
+          
+          
+  publish-gpr:
+    needs: build-nest-js
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         
