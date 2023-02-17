@@ -4,14 +4,14 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '4000',
+        protocol: 'https',
+        hostname: 'spotify-oopf.onrender.com',
+        port: '10000',
       },
     ],
   },
   env: {
-    API_URL: 'http://localhost:4000/',
+    API_URL: 'https://spotify-oopf.onrender.com/',
   },
 }
 
